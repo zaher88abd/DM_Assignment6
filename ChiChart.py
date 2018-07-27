@@ -11,6 +11,9 @@ def getChiChart(numComp=2):
     count_vect = CountVectorizer()
     X_train_counts = count_vect.fit_transform(data)
 
-    X_new = SelectKBest(chi2, k=numComp).fit_transform(X_train_counts, label)
+    chi2_model = SelectKBest(chi2, k=numComp)
+    chi2_model = chi2_model.fit(X_train_counts, label)
+    X_new = chi2_model.transform(X_train_counts)
 
     showChart(x=X_new, y=label, title="Chart Chi for best Component ")
+    return chi2_model
