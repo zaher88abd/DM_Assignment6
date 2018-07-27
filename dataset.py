@@ -29,4 +29,6 @@ class DataSet:
                     self.tranning_label.append(arr[1].replace("\n", ''))
             except Exception as ex:
                 print(ex)
-            return np.array(self.tranning_data), np.array(self.tranning_label)
+            class_name = ['bg', 'mk', 'bs', 'hr', 'sr', 'cz', 'sk'
+                , 'es-AR', 'es-ES', 'pt-BR', 'pt-PT', 'id', 'my', 'xx']
+            return np.array(self.tranning_data), np.array(self.tranning_label), class_name
