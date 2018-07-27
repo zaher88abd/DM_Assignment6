@@ -1,5 +1,6 @@
 import itertools
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot_confusion_matrix(cm, classes,
@@ -35,3 +36,4 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    return plt
