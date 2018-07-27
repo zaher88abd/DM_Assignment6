@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import random
 
 
-def showChart(x, y, title):
+def showChart(x, y, title, range_, limit=5000):
     fig, ax1 = plt.subplots()
     c1 = ''
     c2 = ''
@@ -26,7 +26,7 @@ def showChart(x, y, title):
         , 'azure', 'blue', 'brown', 'cadetblue', 'limegreen', 'maroon'
         , 'cornsilk', 'peachpuff', 'red']
 
-    for i in random.sample(range(len(x)), 5000):
+    for i in random.sample(range(range_), limit):
         if y[i] == 'bg':
             c1 = ax1.scatter(x[i, comp1], x[i, comp2], label='bg', color=colors[0])
         if y[i] == 'mk':

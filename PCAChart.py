@@ -15,8 +15,4 @@ def getSVDChart():
     truncatedSVD = truncatedSVD.fit(X_train_counts)
 
     X_r = truncatedSVD.transform(X_train_counts)
-    showChart(X_r, label, "TruncatedSVD Language parameters ")
-
-    # X_new = SelectKBest(chi2, k=2).fit_transform(X_train_counts, label)
-    #
-    # showChart(x=X_new, y=label, title="TruncatedSVD Language parameters ")
+    showChart(X_r, label, "TruncatedSVD Language parameters ",len(X_r),5000)
