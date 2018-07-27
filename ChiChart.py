@@ -21,6 +21,3 @@ def getChiChart(numComp=2):
     print(chi2_model.scores_.shape)
     print(chi2_model.scores_)
     showChart(x=X_new, y=label, title="Chart Chi for best Component ", range_=X_new.shape[0], limit=3000)
-
-
-getChiChart(3)
