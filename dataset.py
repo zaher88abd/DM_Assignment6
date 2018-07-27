@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class DataSet:
     def __init__(self):
         self.tranning_data = None
@@ -26,4 +29,4 @@ class DataSet:
                     self.tranning_label.append(arr[1].replace("\n", ''))
             except Exception as ex:
                 print(ex)
-            return self.tranning_data, self.tranning_label
+            return np.array(self.tranning_data), np.array(self.tranning_label)

@@ -21,7 +21,12 @@ def showChart(x, y, title):
     comp1 = 0
     comp2 = 1
     # comp3 = 3
-    for i in random.sample(range(len(X_r)), 5000):
+
+    colors = ['navy', 'turquoise', 'darkorange', 'navajowhite', 'salmon'
+        , 'azure', 'blue', 'brown', 'cadetblue', 'limegreen', 'maroon'
+        , 'cornsilk', 'peachpuff', 'red']
+
+    for i in random.sample(range(len(x)), 5000):
         if y[i] == 'bg':
             c1 = ax1.scatter(x[i, comp1], x[i, comp2], label='bg', color=colors[0])
         if y[i] == 'mk':
