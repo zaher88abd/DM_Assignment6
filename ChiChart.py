@@ -13,4 +13,4 @@ def getChiChart(numComp=2):
 
     X_new = SelectKBest(chi2, k=numComp).fit_transform(X_train_counts, label)
 
-    showChart(x=X_new, y=label, title="TruncatedSVD Language parameters ")
+    showChart(x=X_new, y=label, title="Chart Chi for best Component ")
