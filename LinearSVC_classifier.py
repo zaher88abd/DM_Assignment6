@@ -35,5 +35,5 @@ print("Accuracy Score - SVC:", accuracy_score(y_test, y_pred))
 cnf_matrix = confusion_matrix(y_test, y_pred)
 plt.figure()
 plt = plot_confusion_matrix(cnf_matrix, classes=class_names, normalize=True,
-                            title='Normalized confusion matrix')
+                            title='Normalized confusion matrix SVC')
 plt.show()
